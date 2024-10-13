@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+h2 {
+    color: white;
+}
+
+.player {
+    background-image:linear-gradient(to bottom, #490548, #00004B);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    min-width: 200px;
+}
+input[type="range"] {
+    -webkit-appearance: none; /* Remove default appearance in WebKit */
+    appearance: none; /* Remove default appearance in modern browsers */
+    width: 100%; /* Full width */
+    height: 10px; /* Height of the slider */
+    background: #ddd; /* Background color of the track */
+    border-radius: 5px; /* Rounded edges */
+    cursor: pointer; /* Cursor style on hover */
+}
+/* Style the filled portion (progress) in WebKit (Chrome, Safari) */
+input[type="range"]::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #490548 0%, #490548 calc(var(--value) * 1%), #ddd calc(var(--value) * 1%), #ddd 100%);
+}
+input[type="range"]::-moz-range-progress {
+    background-color: #490548; /* Color of the filled portion */
+    height: 10px;
+    border-radius: 5px;
+}
+/* Style the thumb */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Remove default styling in WebKit browsers */
+    width: 5px; /* Width of the thumb */
+    height: 5px; /* Height of the thumb */
+    border-radius: 50%; /* Rounded thumb */
+    background: #490548; /* Color of the thumb */
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 5px; /* Width of the thumb */
+    height: 5px; /* Height of the thumb */
+    border-radius: 50%; /* Rounded thumb */
+    background: #490548; /* Color of the thumb */
+}
+.controls button {
+    background-color:#490548;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.controls button:hover {
+    background-color: #5E115C;
+    
+}
+
+#song-title {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+#image { 
+width: 150px;
+height: 150px;
+object-fit: fill;
+border-radius: 50%;
+margin-bottom: 20px;}
+
